@@ -1,12 +1,12 @@
 package controller
 
 import (
-	"awesomeProject/service"
+	"awesomeProject/service/video"
 )
 
 func Feed(time int) bool {
-	videoService := service.VideoServiceImpl{
-		UserService: &service.VideoSub{},
+	videoService := video.VideoServiceImpl{
+		UserService: &video.VideoSub{},
 	}
 	return videoService.Feed(time)
 }
